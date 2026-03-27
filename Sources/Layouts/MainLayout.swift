@@ -6,6 +6,7 @@ struct MainLayout: Layout {
 
     var body: some Document {
         Head {
+            MetaLink(href: "/css/styles.css", rel: .stylesheet)
             MetaLink(href: "/css/blog.css", rel: .stylesheet)
         }
 
