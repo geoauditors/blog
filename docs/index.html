@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en" data-light-theme="geo-audit-light-light" data-dark-theme="geo-audit-dark-dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Learn how to optimize your website for AI search visibility. Practical guides on GEO, citability, structured data, and AI crawlers." />
+    <meta name="author" content="GEO Audit" />
+    <meta name="generator" content="Ignite v0.6.0" />
+    <title>GEO Audit Blog | GEO Audit</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/css/ignite-core.min.css" rel="stylesheet" />
+    <link href="https://blog.geoauditors.com/" rel="canonical" />
+    <script>(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta property="og:site_name" content="GEO Audit Blog" />
+    <meta property="og:title" content="GEO Audit Blog" />
+    <meta name="twitter:title" content="GEO Audit Blog" />
+    <meta property="og:description" content="Learn how to optimize your website for AI search visibility. Practical guides on GEO, citability, structured data, and AI crawlers." />
+    <meta name="twitter:description" content="Learn how to optimize your website for AI search visibility. Practical guides on GEO, citability, structured data, and AI crawlers." />
+    <meta property="og:url" content="https://blog.geoauditors.com/" />
+    <meta name="twitter:domain" content="blog.geoauditors.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:dnt" content="on" />
+    <link href="/css/blog.css" rel="stylesheet" />
+  </head>
+  <body class="container">
+    <header>
+      <nav class="navbar navbar-expand-md">
+        <div class="container flex-wrap flex-lg-nowrap">
+          <div class="me-2 me-md-auto">
+            <a href="/" class="d-inline-flex align-items-center navbar-brand">GEO Audit Blog</a>
+          </div>
+          <button type="button" class="navbar-toggler btn" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="navbar-nav mb-2 mb-md-0 col justify-content-end">
+              <li class="nav-item"><a href="/" class="nav-link active text-nowrap" aria-current="page">Home</a></li>
+              <li class="nav-item"><a href="/about/" class="nav-link text-nowrap">About</a></li>
+              <li class="nav-item"><a target="_blank" rel="noopener noreferrer" href="https://geoauditors.com" class="nav-link text-nowrap">GEO Audit</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="ig-main-content">
+      <div>
+        <h1 style="font-weight: 700">AI Search Visibility</h1>
+        <p class="lead text-body-secondary mb-5">Practical guides to help your website get discovered, understood, and cited by AI systems.</p>
+      </div>
+      <div>
+        <h3 class="mb-3" style="font-weight: 600"><a href="/blog/what-is-geo/">What Is GEO? Why Your Website Needs Generative Engine Optimization Now</a></h3>
+        <p class="text-body-secondary mb-3">March 27, 2026</p>
+        <p class="mt-2 mb-3">Something fundamental has changed about how people find information online, and most businesses haven’t caught up yet.</p>
+        <h6 class="mb-3"><a rel="tag" href="/tags/g-e-o/"><span class="badge text-bg-primary rounded-pill">GEO</span></a><a rel="tag" href="/tags/a-i-search/"><span class="badge text-bg-primary rounded-pill">AI Search</span></a><a rel="tag" href="/tags/strategy/"><span class="badge text-bg-primary rounded-pill">Strategy</span></a></h6>
+        <hr class="mb-3" />
+        <h3 class="mb-3" style="font-weight: 600"><a href="/blog/six-dimensions-of-ai-visibility/">The 6 Dimensions of AI Visibility: What Determines Whether AI Cites Your Website</a></h3>
+        <p class="text-body-secondary mb-3">March 27, 2026</p>
+        <p class="mt-2 mb-3">When people talk about “showing up in AI,” they usually treat it as a single problem. Either AI mentions your brand or it doesn’t. Either you’re visible or you’re invisible.</p>
+        <h6 class="mb-3"><a rel="tag" href="/tags/g-e-o/"><span class="badge text-bg-primary rounded-pill">GEO</span></a><a rel="tag" href="/tags/a-i-visibility/"><span class="badge text-bg-primary rounded-pill">AI Visibility</span></a><a rel="tag" href="/tags/strategy/"><span class="badge text-bg-primary rounded-pill">Strategy</span></a></h6>
+        <hr class="mb-3" />
+        <h3 class="mb-3" style="font-weight: 600"><a href="/blog/is-your-robots-txt-blocking-ai/">Is Your Robots.txt Blocking AI? How to Check in 5 Minutes</a></h3>
+        <p class="text-body-secondary mb-3">March 27, 2026</p>
+        <p class="mt-2 mb-3">Right now, your website might be completely invisible to ChatGPT, Claude, Perplexity, and every other AI system that people use to find businesses like yours. Not because your content is bad. Not because your SEO is weak. Because a single text file on your server is telling AI crawlers to go away — and you probably don’t even know it’s there.</p>
+        <h6 class="mb-3"><a rel="tag" href="/tags/platform-readiness/"><span class="badge text-bg-primary rounded-pill">Platform Readiness</span></a><a rel="tag" href="/tags/a-i-crawlers/"><span class="badge text-bg-primary rounded-pill">AI Crawlers</span></a><a rel="tag" href="/tags/quick-wins/"><span class="badge text-bg-primary rounded-pill">Quick Wins</span></a></h6>
+        <hr class="mb-3" />
+        <h3 class="mb-3" style="font-weight: 600"><a href="/blog/how-to-write-content-ai-cites/">How to Write Content That AI Actually Cites</a></h3>
+        <p class="text-body-secondary mb-3">March 27, 2026</p>
+        <p class="mt-2 mb-3">You spent weeks on a comprehensive guide. It’s well-researched, thoroughly edited, and ranks on page one. But when someone asks ChatGPT or Perplexity the exact question your article answers, your content is nowhere in the response.</p>
+        <h6 class="mb-3"><a rel="tag" href="/tags/citability/"><span class="badge text-bg-primary rounded-pill">Citability</span></a><a rel="tag" href="/tags/content-strategy/"><span class="badge text-bg-primary rounded-pill">Content Strategy</span></a><a rel="tag" href="/tags/a-i-search/"><span class="badge text-bg-primary rounded-pill">AI Search</span></a></h6>
+        <hr class="mb-3" />
+        <h3 class="mb-3" style="font-weight: 600"><a href="/blog/five-quick-wins-ai-visibility/">5 Things You Can Fix Today to Improve Your AI Visibility</a></h3>
+        <p class="text-body-secondary mb-3">March 27, 2026</p>
+        <p class="mt-2 mb-3">You don’t need a six-month SEO overhaul to start showing up in AI search results. The gap between invisible and visible is often a handful of straightforward fixes — things that take minutes to check and less than an hour to act on.</p>
+        <h6 class="mb-3"><a rel="tag" href="/tags/quick-wins/"><span class="badge text-bg-primary rounded-pill">Quick Wins</span></a><a rel="tag" href="/tags/a-i-visibility/"><span class="badge text-bg-primary rounded-pill">AI Visibility</span></a><a rel="tag" href="/tags/getting-started/"><span class="badge text-bg-primary rounded-pill">Getting Started</span></a></h6>
+        <hr class="mb-3" />
+        <h3 class="mb-3" style="font-weight: 600"><a href="/blog/json-ld-structured-data-basics/">"JSON-LD Structured Data: What Every Website Needs for AI Visibility"</a></h3>
+        <p class="text-body-secondary mb-3">March 27, 2026</p>
+        <p class="mt-2 mb-3">There is a hidden layer of your website that AI reads first — and most businesses don’t even know it exists.</p>
+        <h6 class="mb-3"><a rel="tag" href="/tags/schema-markup/"><span class="badge text-bg-primary rounded-pill">Schema Markup</span></a><a rel="tag" href="/tags/j-s-o-n-l-d/"><span class="badge text-bg-primary rounded-pill">JSON-LD</span></a><a rel="tag" href="/tags/technical/"><span class="badge text-bg-primary rounded-pill">Technical</span></a></h6>
+        <hr class="mb-3" />
+      </div>
+    </div>
+    <div class="mt-auto"></div>
+    <hr />
+    <p class="text-body-secondary text-center" style="padding: 20px">© 2026 <a target="_blank" rel="noopener noreferrer" href="https://geoauditors.com">GEO Audit</a> — AI Visibility Analysis for Your Website</p>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/ignite-core.js"></script>
+  </body>
+</html>

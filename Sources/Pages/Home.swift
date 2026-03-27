@@ -16,12 +16,12 @@ struct Home: StaticPage {
             Text("Practical guides to help your website get discovered, understood, and cited by AI systems.")
                 .font(.lead)
                 .foregroundStyle(.secondary)
-                .margin(.bottom, .extraLarge)
+                .margin(.bottom, .xLarge)
         }
 
         Section {
             for article in articles.all.sorted(by: {
-                ($0.date ?? .distantPast) > ($1.date ?? .distantPast)
+                $0.date > $1.date
             }) {
                 Group {
                     Text {
@@ -30,16 +30,12 @@ struct Home: StaticPage {
                     .font(.title3)
                     .fontWeight(.semibold)
 
-                    if let date = article.date {
-                        Text(date.formatted(date: .long, time: .omitted))
-                            .foregroundStyle(.secondary)
-                            .font(.body)
-                    }
+                    Text(article.date.formatted(date: .long, time: .omitted))
+                        .foregroundStyle(.secondary)
+                        .font(.body)
 
-                    if let description = article.description {
-                        Text(description)
-                            .margin(.top, .small)
-                    }
+                    Text(article.description)
+                        .margin(.top, .small)
 
                     if let tags = article.tags, !tags.isEmpty {
                         if let tagLinks = article.tagLinks() {

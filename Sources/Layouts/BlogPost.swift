@@ -6,12 +6,10 @@ struct BlogPost: ArticlePage {
         Text(article.title)
             .font(.title1)
 
-        if let date = article.date {
-            Text(date.formatted(date: .long, time: .omitted))
-                .foregroundStyle(.secondary)
-                .font(.title6)
-                .margin(.bottom, .large)
-        }
+        Text(article.date.formatted(date: .long, time: .omitted))
+            .foregroundStyle(.secondary)
+            .font(.title6)
+            .margin(.bottom, .large)
 
         if let tags = article.tags, !tags.isEmpty {
             Group {

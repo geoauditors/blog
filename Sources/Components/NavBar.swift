@@ -10,9 +10,7 @@ struct NavBar: HTML {
                 .target(.newWindow)
                 .relationship(.noOpener, .noReferrer)
         } logo: {
-            Text("GEO Audit Blog")
-                .font(.title4)
-                .fontWeight(.bold)
+            "GEO Audit Blog"
         }
     }
 }
