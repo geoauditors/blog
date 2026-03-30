@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en" data-light-theme="geo-audit-light-light" data-dark-theme="geo-audit-dark-dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="If you work in marketing or manage a website, you are probably familiar with robots.txt. It has been around for decades, telling search engine crawlers which parts of your site they can and cannot access. Now there is a new file gaining traction that does something fundamentally different: instead of telling AI what it can crawl, it tells AI what your site is actually about." />
+    <meta name="author" content="GEO Audit" />
+    <meta name="generator" content="Ignite v0.6.0" />
+    <title>What Is llms.txt? The New File That Helps AI Understand Your Website | GEO Audit</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/css/ignite-core.min.css" rel="stylesheet" />
+    <link href="https://blog.geoauditors.com/blog/what-is-llms-txt" rel="canonical" />
+    <script>(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta property="og:site_name" content="GEO Audit Blog" />
+    <meta property="og:title" content="What Is llms.txt? The New File That Helps AI Understand Your Website" />
+    <meta name="twitter:title" content="What Is llms.txt? The New File That Helps AI Understand Your Website" />
+    <meta property="og:description" content="If you work in marketing or manage a website, you are probably familiar with robots.txt. It has been around for decades, telling search engine crawlers which parts of your site they can and cannot access. Now there is a new file gaining traction that does something fundamentally different: instead of telling AI what it can crawl, it tells AI what your site is actually about." />
+    <meta name="twitter:description" content="If you work in marketing or manage a website, you are probably familiar with robots.txt. It has been around for decades, telling search engine crawlers which parts of your site they can and cannot access. Now there is a new file gaining traction that does something fundamentally different: instead of telling AI what it can crawl, it tells AI what your site is actually about." />
+    <meta property="og:url" content="https://blog.geoauditors.com/blog/what-is-llms-txt" />
+    <meta name="twitter:domain" content="blog.geoauditors.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:dnt" content="on" />
+    <link href="/css/styles.css" rel="stylesheet" />
+    <link href="/css/blog.css" rel="stylesheet" />
+  </head>
+  <body class="container">
+    <header>
+      <nav class="navbar navbar-expand-md">
+        <div class="container flex-wrap flex-lg-nowrap">
+          <div class="me-2 me-md-auto">
+            <a href="/" class="d-inline-flex align-items-center navbar-brand">GEO Audit Blog</a>
+          </div>
+          <button type="button" class="navbar-toggler btn" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="navbar-nav mb-2 mb-md-0 col justify-content-end">
+              <li class="nav-item"><a href="/" class="nav-link text-nowrap">Home</a></li>
+              <li class="nav-item"><a href="/about/" class="nav-link text-nowrap">About</a></li>
+              <li class="nav-item"><a target="_blank" rel="noopener noreferrer" href="https://geoauditors.com" class="nav-link text-nowrap">GEO Audit</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="ig-main-content">
+      <h1>What Is llms.txt? The New File That Helps AI Understand Your Website</h1>
+      <h6 class="text-body-secondary mb-4">March 30, 2026</h6>
+      <h6 class="mb-3"><a rel="tag" href="/tags/technical/"><span class="badge text-bg-primary rounded-pill">Technical</span></a><a rel="tag" href="/tags/a-i-search/"><span class="badge text-bg-primary rounded-pill">AI Search</span></a></h6>
+      <p></p>
+      <p>If you work in marketing or manage a website, you are probably familiar with robots.txt. It has been around for decades, telling search engine crawlers which parts of your site they can and cannot access. Now there is a new file gaining traction that does something fundamentally different: instead of telling AI what it can crawl, it tells AI what your site is actually about.</p>
+      <p>It is called llms.txt, and while it is still in its early days, it represents a shift in how websites communicate with AI systems. Understanding it now puts you ahead of the curve.</p>
+      <p>The llms.txt file is a plain text file placed at the root of your website (yoursite.com/llms.txt) that provides a structured, human-readable summary of your organization and your most important content. It is designed to be read by large language models, the AI systems that power tools like ChatGPT, Claude, Perplexity, and others.</p>
+      <p>The specification was proposed by Jeremy Howard, co-founder of fast.ai, in late 2024. The idea was simple but powerful: websites already have robots.txt to manage crawler access and sitemap.xml to list their pages, but neither of these tells an AI what the site is actually about, what its most important content is, or how to navigate its information.</p>
+      <p>The llms.txt file fills that gap. It is a direct communication channel between your website and AI systems, written in a format that both humans and AI can easily read.</p>
+      <h2>How llms.txt Differs from Robots.txt</h2>
+      <p>The distinction is important because the two files serve completely different purposes.</p>
+      <p><strong>Robots.txt</strong> is about access control. It tells crawlers “you may visit these pages” and “you may not visit these pages.” It is a set of permissions. It does not describe content, provide context, or help crawlers understand what they are looking at.</p>
+      <p><strong>llms.txt</strong> is about comprehension. It tells AI systems “here is who we are, here is what our site contains, and here are the most important pages you should understand.” It is a guide. It assumes the AI already has access and helps it make sense of what it finds.</p>
+      <p>Think of it this way: robots.txt is the security guard at the building entrance. llms.txt is the information desk in the lobby that gives visitors a map and explains what each floor contains.</p>
+      <p>You need both. Robots.txt ensures AI crawlers can access your content. llms.txt ensures they understand it.</p>
+      <h2>What Goes in an llms.txt File</h2>
+      <p>The llms.txt specification uses a straightforward Markdown-based format. Here is what it includes, section by section.</p>
+      <h3>The Title Line</h3>
+      <p>The file starts with a top-level heading that is your organization or site name:</p>
+      <pre><code># Acme Marketing Solutions
+</code></pre>
+      <h3>The Description</h3>
+      <p>Immediately after the title, you include a brief description of your organization. This should be a concise paragraph explaining who you are, what you do, and who your audience is:</p>
+      <pre><code>&gt; Acme Marketing Solutions is a B2B marketing agency specializing in
+&gt; content strategy and demand generation for mid-market SaaS companies.
+&gt; We publish research, guides, and tools for marketing leaders.
+</code></pre>
+      <h3>Important Pages</h3>
+      <p>The core of the file is a categorized list of your most important pages, each with a brief description and a link. These are grouped under section headings:</p>
+      <pre><code>## About
+- [About Us](https://acme.com/about): Our story, team, and mission
+- [Contact](https://acme.com/contact): How to reach our team
+
+## Services
+- [Content Strategy](https://acme.com/services/content-strategy): Our approach to B2B content planning
+- [Demand Generation](https://acme.com/services/demand-gen): How we drive qualified pipeline
+
+## Resources
+- [2025 B2B Content Benchmark Report](https://acme.com/research/2025-benchmarks): Original research on content performance across 500 B2B companies
+- [Content Strategy Guide](https://acme.com/guides/content-strategy): Comprehensive guide to building a B2B content engine
+</code></pre>
+      <h3>Optional: Detailed Content File</h3>
+      <p>The specification also defines an optional companion file called llms-full.txt that contains more detailed content from your key pages. While llms.txt is the directory, llms-full.txt is the full library. Most organizations start with llms.txt and add the full version later if needed.</p>
+      <h2>Why llms.txt Matters for AI Visibility</h2>
+      <p>There are several reasons this file is worth your attention, even at this early stage.</p>
+      <h3>It Guides AI to Your Best Content</h3>
+      <p>AI systems crawl websites and try to determine what is most important. Without guidance, they might focus on your homepage, miss your most valuable research, or give equal weight to a cornerstone guide and a throwaway blog post from three years ago. The llms.txt file lets you explicitly tell AI which pages represent your best, most authoritative content. You are curating your own presence.</p>
+      <h3>It Provides Context That Pages Alone Cannot</h3>
+      <p>Individual pages are read in isolation by AI crawlers. Your product page explains your product. Your about page explains your company. But the connections between them, the fact that your company is an authority in a specific domain and that your product page should be understood in the context of your expertise, are not obvious from any single page. The llms.txt file provides that connective context.</p>
+      <h3>It Signals AI-Readiness</h3>
+      <p>Organizations that have an llms.txt file are signaling that they understand AI-powered search and are actively facilitating it. As AI systems become more sophisticated in how they evaluate and prioritize sources, signals of active cooperation may contribute to trust scores. Early adoption positions you as a forward-thinking, AI-aware organization.</p>
+      <h3>It Is Low Effort with High Potential</h3>
+      <p>Creating an llms.txt file takes less than an hour for most websites. The format is simple, no special tools or technical skills are required. Given the potential upside as AI systems increasingly reference these files, the return on time invested is unusually favorable.</p>
+      <h2>How to Create Your llms.txt File</h2>
+      <p>Here is a practical walkthrough.</p>
+      <h3>Step 1: Identify Your Key Pages</h3>
+      <p>Before you write anything, decide which pages represent your organization’s most important and authoritative content. Think about:</p>
+      <ul>
+        <li>Your homepage and about page</li>
+        <li>Your primary product or service pages</li>
+        <li>Your best-performing and most comprehensive content pieces (cornerstone content, pillar pages, original research)</li>
+        <li>Key resources like guides, tools, or data sets</li>
+        <li>Contact and trust pages (privacy policy, terms of service)</li>
+      </ul>
+      <p>Aim for 15 to 30 pages. This is not meant to be a complete sitemap. It is meant to highlight your most important content.</p>
+      <h3>Step 2: Write Your Description</h3>
+      <p>Craft a two-to-three sentence description of your organization. Be specific about what you do, who you serve, and what makes you authoritative. Avoid marketing language and focus on factual clarity. Remember, this is being read by an AI that is trying to categorize and understand your organization, not a prospect you are trying to impress.</p>
+      <p>Good: “Pinnacle Financial Advisors is a fee-only financial planning firm serving technology professionals in the San Francisco Bay Area. We specialize in equity compensation planning, including ISOs, RSUs, and ESPP optimization.”</p>
+      <p>Weak: “Pinnacle Financial Advisors is a leading innovative financial planning firm delivering best-in-class solutions for discerning clients.”</p>
+      <p>The first version tells AI exactly what you do and for whom. The second tells it nothing useful.</p>
+      <h3>Step 3: Organize and Write the File</h3>
+      <p>Group your pages into logical categories. Use clear section headings. Write a brief, factual description for each linked page. Keep descriptions to one sentence.</p>
+      <h3>Step 4: Save and Upload</h3>
+      <p>Save your file as llms.txt and upload it to the root directory of your website. It should be accessible at yoursite.com/llms.txt. No special server configuration is required. It is a plain text file served like any other.</p>
+      <h3>Step 5: Validate</h3>
+      <p>After uploading, visit the URL in your browser to confirm the file loads correctly. Read through it to make sure all links work and all descriptions are accurate. There are also emerging validation tools that check your llms.txt against the specification.</p>
+      <h2>Real-World Examples</h2>
+      <p>Looking at how established organizations have implemented llms.txt can be instructive.</p>
+      <p><strong>Documentation-heavy sites</strong> tend to use llms.txt to direct AI toward their most current and comprehensive documentation, ensuring that AI systems reference up-to-date information rather than outdated pages that might still rank well in traditional search.</p>
+      <p><strong>E-commerce sites</strong> use the file to highlight their product categories, buying guides, and brand story, helping AI understand the scope of their catalog and their areas of specialty.</p>
+      <p><strong>Service businesses</strong> focus on their service descriptions, case studies, and thought leadership content, building a picture of expertise in their specific domain.</p>
+      <p><strong>Content publishers</strong> curate their most authoritative and evergreen pieces, distinguishing their best work from the volume of time-sensitive content that may be less relevant for AI citation purposes.</p>
+      <p>The common thread is curation. Every organization that creates an effective llms.txt file is making deliberate choices about what represents them best.</p>
+      <h2>Which AI Systems Use llms.txt?</h2>
+      <p>The specification is still relatively new, and the degree to which different AI systems use it is evolving. Here is what we know.</p>
+      <p>Several AI coding assistants and development tools have adopted llms.txt as a standard way to understand project documentation. This was one of the earliest use cases and remains well-supported.</p>
+      <p>General-purpose AI assistants like ChatGPT, Claude, and Perplexity are increasingly aware of llms.txt files. While none of these systems have published official documentation about how they weight llms.txt content, testing suggests that AI systems do read and reference these files when they encounter them during web browsing.</p>
+      <p>The trajectory is clear: as more sites adopt the standard, AI systems will increasingly incorporate it into their understanding of websites. Being early means being part of that growing ecosystem from the start.</p>
+      <h2>Common Questions About llms.txt</h2>
+      <p><strong>Does llms.txt replace my sitemap?</strong> No. Your XML sitemap tells crawlers which pages exist and when they were last updated. Your llms.txt tells AI what your site is about and which pages are most important. They serve different purposes and both should exist.</p>
+      <p><strong>How often should I update it?</strong> Update your llms.txt whenever you publish significant new content, discontinue a product or service, or change your organization’s focus. For most sites, a quarterly review is sufficient, with additional updates for major content launches.</p>
+      <p><strong>Can llms.txt hurt my site?</strong> There is no known downside to having an llms.txt file. It is purely additive. It provides information that helps AI understand your site. If you list pages you would rather AI not focus on, simply do not include them. The file is curated, not comprehensive.</p>
+      <p><strong>Should I include pages I do not want AI to cite?</strong> No. Only include pages that represent your best, most authoritative content. This is your opportunity to put your best foot forward. Internal tools, customer portals, and thin content should be left out.</p>
+      <p><strong>What if my competitors do not have one?</strong> That is your advantage. In a landscape where most sites do not yet have an llms.txt file, having one makes your site more navigable and comprehensible to AI systems than your competitors’ sites. As AI-powered search grows, this advantage compounds.</p>
+      <h2>Getting Ahead of the Curve</h2>
+      <p>The llms.txt specification represents a broader shift in how the web communicates with AI. For decades, websites were built primarily for human visitors, with some accommodation for search engine crawlers. Now a third audience is emerging: AI systems that need to understand, categorize, and cite web content.</p>
+      <p>The organizations that communicate effectively with all three audiences will have the strongest visibility. The llms.txt file is one of the simplest, most direct ways to start communicating with AI systems on their terms.</p>
+      <p>It takes less than an hour to create. It costs nothing to implement. And in a field where the advantages go to those who move early, the question is not whether to create an llms.txt file, but why you would wait.</p>
+      <p></p>
+    </div>
+    <div class="mt-auto"></div>
+    <hr />
+    <p class="text-body-secondary text-center" style="padding: 20px">© 2026 <a target="_blank" rel="noopener noreferrer" href="https://geoauditors.com">GEO Audit</a> — AI Visibility Analysis for Your Website</p>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/ignite-core.js"></script>
+  </body>
+</html>
